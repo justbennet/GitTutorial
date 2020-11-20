@@ -17,7 +17,7 @@ and are part of the 'coder culture', which is itself cool.
 Mostly, though, you might find it really useful in your work.  That's what
 matters.
 
-# A day in the life of a Gitter
+# A day in the life
 
 Let's assume for the moment that you start work and you need to add a file
 that performs some new numerical operation, say, a noise filter for
