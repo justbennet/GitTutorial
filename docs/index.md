@@ -11,35 +11,53 @@ a fairly convenient way to communicate with other people who use your code.
 They can submit questions and report problems there; they can help you fix
 broken things; they can add bells and whistles; whatever.
 
-It's also a sort of de rigeur thing if you want people to think you're cool
-and are part of the 'coder culture', which is itself cool.
+It's also a sort of a _de rigeur_ thing if you want people to think you're cool
+and are part of the 'coder culture', which is itself cool.  And we all know
+how important _cool_ is!  ;-)
 
-Mostly, though, you might find it really useful in your work.  That's what
-matters.
+Mostly, though, you might find it really useful in your work.
 
 # A day in the life
 
-Let's assume for the moment that you start work and you need to add a file
-that performs some new numerical operation, say, a noise filter for
-electrode data.
+Let's assume for the moment that your group already has Git and GitHub
+set up, but you're coming into a new way of working.  This is what your
+introduction to how this all works might be like.
 
-This is a new file, so you know that no other files depend on it.  That makes
-things easier right away.
+You get your favorite morning beverage and log into your computer.  You
+found a nice way to vectorize something that's been a nested for loop.
 
-You change into the project directory, open Matlab, write furiously until
-exhaustion.  You take a break, run it several times testing for edge cases,
-how does it deal with unexpected values as inputs, etc.  You get it to a
-state where it works.
+The first thing to do is make sure you're up to date with everyone else's
+changes, so you _pull_ those.
 
-Next you add it to the list of things that have changed since you started.
-Today, it's just one file; on other days it could be many.
+Next you make a new _branch_ to work on your nifty new idea.
 
-Next you add all the changes to the project, and along with putting the file
-there, you sign your work, and you add to the change log -- the code version
-of the lab notebook -- an explanation of what your changes do.  For something
-simple, this might be a few words:  "Fixed numerous typos".  For something
-more complex, this might be more extended.
+A couple of hours (or even days) go by getting the vectorization right,
+and it now works!
 
-Next you send your changes to GitHub where they become part of the larger
-project.
+You _commit_ all the changes you've made along with some comments in
+the _commit message_ about what you've done, why, maybe you have to
+cite someone's article for the source of the numerical method, etc.
 
+You _push_ your new branch to GitHub.
+
+You log into GitHub and submit a _pull request_ (PR) asking someone
+to look at your code, comment and request changes if necessary, and
+then to _merge_ what you did into the _main_ branch.
+
+You check out the main branch again so any further work is based on
+the current state, and you pull again just to be sure.
+
+Lunch!
+
+# The tour
+
+On the left there are buttons corresponding to steps in getting
+started with Git and GitHub.  We'll be starting from scratch,
+creating a brand new repository, adding some files, saving changes,
+looking at how we might work with other users, and going through
+all the steps above.
+
+That should give you a good start on integrating GitHub into your
+current projects and using it to keep your code organized and
+working even while it is being extended and improved.  We'll
+also look very quickly at how documentation can be incorporated.
