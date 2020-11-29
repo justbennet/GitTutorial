@@ -24,12 +24,17 @@ set up, but you're coming into a new way of working.  This is what your
 introduction to how this all works might be like.
 
 You get your favorite morning beverage and log into your computer.  You
-found a nice way to vectorize something that's been a nested for loop.
+found a nice way to vectorize something that's been a nested for loop.  Now
+you want to add it to the group's code base.
 
 The first thing to do is make sure you're up to date with everyone else's
 changes, so you _pull_ those.
 
 Next you make a new _branch_ to work on your nifty new idea.
+
+You modify an existing file to use the new technique, and you add a new
+file that does nothing but test the new technique's results against the
+old.
 
 A couple of hours (or even days) go by getting the vectorization right,
 and it now works!
