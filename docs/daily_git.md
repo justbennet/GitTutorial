@@ -8,6 +8,13 @@ will be used.  Those will include
 * Saving changes to your local copy
 * Transmitting those changes to the GitHub repository.
 
+But first, you should configure your local Git so it knows who
+you are and what some of your preferences are.  The main things
+that people typically set are their real name, their e-mail
+address, and which editor to use.  See the [Git configuration
+page](https://justbennet.github.io/GitTutorial/git_configuration.html)
+for some instructions for setting up Git on your computer.
+
 ## Getting an initial copy
 
 As outlined in the
