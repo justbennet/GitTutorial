@@ -63,6 +63,7 @@ You will want to remember that later.
 
 Now click the green **Create repository** button.  That should result in a page that
 looks something like this (with your GitHub name instead of `carpenterbennet`.
+
 ![image](https://github.com/justbennet/GitTutorial/raw/main/images/new_repo_page.png)
 
 
