@@ -127,7 +127,7 @@ If the commit message outlines in English what the changes were intended to
 do, then someone checking on them can more easily figure out whether the
 code changes do so.
 
-### Making changes from the command line
+### Changing a file from your computer
 
 When you change things using the GitHub interface, most actions are performed
 with buttons.  Now we'll look at how to do the same thing from the command
@@ -142,11 +142,54 @@ You've made changes to the code at GitHub, so what you have on your local
 computer is not what you have on GitHub.  This situation will most commonly
 arise when working with others who might change code without you knowing.
 
-It is always a good idea to start by _pulling_ changes made at GitHub.  This
-is done with
+It is always a good idea to start by _pulling_ changes made at GitHub.
+So, change to the directory into which you cloned the GitHub repository.
+Then use
 
 ```
 $ git pull origin main
 ```
 
+to get the changes that were made directly on GitHub.  You'll see some
+kind of progress report.
 
+The simplest changes are those that are made directly to the `main`
+branch.  "What's that _branch_ thingy?" you ask.  A branch is
+basically a different version.  We'll get to creating new branches
+later, but for now, you are working with your own files in your
+own repo, so you can work directly with `main` and not step on
+the toes of others or have yours stepped on.
+
+So, use whatever editor you like and add a line of text to the
+`README.md` file.
+
+```
+An additional line added on my computer.
+```
+
+So, now you have a modified file.  To see what `git` thinks of
+this,
+
+```
+$ git status
+On branch main
+Your branch is up-to-date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Git is telling you that you are on the `main` branch, that it is
+up to date with the one on GitHub (the `origin/main`).  Then it tells
+you that you have changes but they are not _staged_ for commit, which
+we'll come back to shortly.  Next it tells you what you can do about
+that.  The first option is what you need to do to stage the changes,
+and the second option is how to reverse the changes.  Then it it
+tells you which file(s) were changed.
+
+Make a change, add the changed file, possibly repeat _N_ times;
+commit all the changes.
