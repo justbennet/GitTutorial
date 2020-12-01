@@ -15,7 +15,8 @@ It's also a sort of a _de rigeur_ thing if you want people to think you're cool
 and are part of the 'coder culture', which is itself cool.  And we all know
 how important _cool_ is!  ;-)
 
-Mostly, though, you might find it really useful in your work.
+Mostly, though, you might find it really useful in your work.  The next
+section is a narrative of how Git is often used.
 
 # A day in the life
 
