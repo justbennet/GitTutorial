@@ -28,3 +28,10 @@
    $ git commit -m "A short commit message"
    ```
    
+1. When working on lab repositories, you should _not_ be working from
+   the `main` branch.  If you are working on your own repo, you may
+   be doing so.  Once your changes are committed, and you are ready
+   for others to see the work, you should push to GitHub
+   ```
+   $ git push origin <branch name>
+   ```
