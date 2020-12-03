@@ -8,6 +8,16 @@ will be used.  Those will include
 * Saving changes to your local copy
 * Transmitting those changes to the GitHub repository.
 
+You can get the full treatment (minus the bits about GitHub) about
+what's happening here from the book
+[Pro Git by Scott Chacon and Ben Straub](https://git-scm.com/book/en/v2).
+The book is avaiable from that site as both a `.pdf` and in `.epub`
+format.  I recommend everyone get a copy.
+
+The chapter on
+[Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+corresponds to this section of this tutorial.
+
 But first, you should configure your local Git so it knows who
 you are and what some of your preferences are.  The main things
 that people typically set are their real name, their e-mail
@@ -15,7 +25,7 @@ address, and which editor to use.  See the [Git configuration
 page](https://justbennet.github.io/GitTutorial/git_configuration.html)
 for some instructions for setting up Git on your computer.
 
-## Getting an initial copy
+## Getting an initial copy of your repo
 
 As outlined in the
 [Introduction](https://justbennet.github.io/GitTutorial/index.html)
@@ -191,5 +201,101 @@ that.  The first option is what you need to do to stage the changes,
 and the second option is how to reverse the changes.  Then it it
 tells you which file(s) were changed.
 
-Make a change, add the changed file, possibly repeat _N_ times;
-commit all the changes.
+Before we `add` or `commit`, it's often useful to look at what changes
+have actually been made.  I've found some I thought were made missing,
+and I've also found changes I did not intend.  Git provides access to
+the standard Unix utility `diff`, which shows the differences between
+two files.  Our current state of things is that we have a modified file
+that has not been added or committed, so we can
+
+```
+diff --git a/README.md b/README.md
+index c48a3fe..c646b9f 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,4 @@
+-# sample
+\ No newline at end of file
++# Keilholz MIND Lab Git tutorial
++
++This repository is an example for practicing with Git.
++
+```
+
+Changes are shown as lines that would be removed (shown with a prefixed
+`-` sign) and lines that would be added (shown with a prefixed `+` sign).
+
+After review, we are satisfied the changes are good, so
+
+```
+$ git add README.md
+```
+
+You can use shell wildcards (e.g., `*.md`, `README.*`), and Git will
+not add unchanged files.
+
+For those who remember working with paper and pencil, you can think
+of the local directory as being your desktop, with documents strewn
+about.  There is a basket called `staging`, and when you are done
+making changes to a document, you put it in the `staging` basket.
+
+If you decide to change something in the `stage` basket, you edit
+it, which implicitly makes a different version, which must be `add`ed
+again to supercede the version in the `stage` basket.
+
+When you've made sufficient changes to documents, you `commit` them,
+which is a bit like calling your trusty minion, who takes the stuff
+from `stage`, types it neatly, and puts in in the cabinet called
+`repo`.
+
+```
+$ git commit
+```
+
+That will open the editor you set in your preferences for you to
+type the commit message.  Think of the commit message as being
+like e-mail:  The first line should be a short summary, like
+the subject line, then skip a line, and if a more detailed
+explanation will be helpful for people, enter it on the third
+and following lines.
+
+The editor may or may not do line wrapping automatically.  I
+encourage people to keep their lines shorter than 76 characters
+so they will display nicely in a standard terminal window.
+Exiting the editor and saving the changes will finish the commit.
+
+If the change was minor, you can include the commit message
+on the command line, as in
+
+```
+$ git commit -m "Fixing minor typos in README"
+
+which will bypass the editor and commit with a one-line message.
+
+Once files have been committed, you need to `push` your changes to
+GitHub.
+
+```
+$ git push origin main
+```
+
+You _do not_ have to push your changes after every `commit`.  I often
+do not.  I tend to commit more often than I really need to, and when
+I get things to a relatively finished state, only then do I push to
+GitHub.  That makes keeping track of the changes and outlining them
+in the commit messages easier for me.
+
+If you want to reorganize your files, Git has its own versions
+of the `rm` (remove) and `mv` (move) commands from Linux.  You
+should use those in preference to the Linux commands so Git
+will register the changes properly.
+
+To summarize, the standard working routine is
+
+1. Update from the source
+1. Make changes
+1. Add the changes
+1. Commit the changes
+1. Repeat the previous three steps as often as makes sense
+1. Push the changed repo to GitHub
+
