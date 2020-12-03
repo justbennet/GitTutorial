@@ -269,6 +269,7 @@ on the command line, as in
 
 ```
 $ git commit -m "Fixing minor typos in README"
+```
 
 which will bypass the editor and commit with a one-line message.
 
