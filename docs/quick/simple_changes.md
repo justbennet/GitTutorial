@@ -4,8 +4,19 @@
 
 1. Check to make sure that you are starting from a good place.
    ```
+   # Check whether you are working on the right branch
+   $ git branch
+   # Are there changes you need?
    $ git status
-   ```
+      ```
+
+1. If you need to get some additions from `origin` (usually from
+`main`, but sometimes not), then
+
+```
+$ # Pull the branch 
+$ git pull origin
+```
 
 1. Add/commit any changes that need to be made; update as needed.
 
